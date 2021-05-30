@@ -6,6 +6,7 @@
     "nx": "nx",
     "serve": "nx serve",
     "serve:desktop": "nx run-many --target=serve --projects=web,desktop --parallel",
+    "serve:web": "nx serve web",
     "build": "nx build",
     "build:desktop": "nx run-many --target=build --projects=web,desktop --parallel",
     "test": "nx test",
