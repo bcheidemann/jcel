@@ -7,6 +7,14 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <script>
+      var global = (1, eval)('this');
+      global.global = global;
+      global.globalThis = global;
+      global.frames = global;
+      global.self = global;
+      global.window = global;
+    </script>
   </head>
   <body>
     <div id="root"></div>
