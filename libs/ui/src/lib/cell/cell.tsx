@@ -7,15 +7,21 @@ export interface CellProps {}
 
 export function Cell(props: CellProps) {
   return (
-    <input style={{
-      flex: 1,
-      borderWidth: 1,
-      borderBottomWidth: 0,
-      borderRightWidth: 0,
-      borderStyle: 'solid',
-      borderColor: 'lightgray',
-      minWidth: 50,
-    }} />
+    <input
+      style={{
+        flex: 1,
+        borderWidth: 1,
+        borderBottomWidth: 0,
+        borderRightWidth: 0,
+        borderStyle: 'solid',
+        borderColor: 'lightgray',
+        minWidth: 50,
+      }}
+      onChange={console.log}
+      onKeyPress={console.log}
+      onBlur={console.log}
+      multiple={true}
+    />
   );
 }
 
