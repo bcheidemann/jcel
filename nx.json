@@ -29,6 +29,7 @@
     "desktop": { "tags": [] },
     "core": { "tags": ["core"] },
     "topological-sort": { "tags": ["topological-sort"] },
-    "ui": { "tags": [] }
+    "ui": { "tags": [] },
+    "io": { "tags": [] }
   }
 }
