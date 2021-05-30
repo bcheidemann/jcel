@@ -1,23 +1,12 @@
 {
   "version": 2,
-  "cli": {
-    "defaultCollection": "@nrwl/react"
-  },
+  "cli": { "defaultCollection": "@nrwl/react" },
   "defaultProject": "web",
   "generators": {
     "@nrwl/react": {
-      "application": {
-        "style": "css",
-        "linter": "eslint",
-        "babel": true
-      },
-      "component": {
-        "style": "css"
-      },
-      "library": {
-        "style": "css",
-        "linter": "eslint"
-      }
+      "application": { "style": "css", "linter": "eslint", "babel": true },
+      "component": { "style": "css" },
+      "library": { "style": "css", "linter": "eslint" }
     }
   },
   "projects": {
@@ -28,22 +17,15 @@
       "targets": {
         "build": {
           "executor": "@nrwl/web:build",
-          "outputs": [
-            "{options.outputPath}"
-          ],
+          "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/apps/web",
             "index": "apps/web/src/index.html",
             "main": "apps/web/src/main.tsx",
             "polyfills": "apps/web/src/polyfills.ts",
             "tsConfig": "apps/web/tsconfig.app.json",
-            "assets": [
-              "apps/web/src/favicon.ico",
-              "apps/web/src/assets"
-            ],
-            "styles": [
-              "apps/web/src/styles.css"
-            ],
+            "assets": ["apps/web/src/favicon.ico", "apps/web/src/assets"],
+            "styles": ["apps/web/src/styles.css"],
             "scripts": [],
             "webpackConfig": "@nrwl/react/plugins/webpack"
           },
@@ -74,28 +56,18 @@
         },
         "serve": {
           "executor": "@nrwl/web:dev-server",
-          "options": {
-            "buildTarget": "web:build"
-          },
+          "options": { "buildTarget": "web:build" },
           "configurations": {
-            "production": {
-              "buildTarget": "web:build:production"
-            }
+            "production": { "buildTarget": "web:build:production" }
           }
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "apps/web/**/*.{ts,tsx,js,jsx}"
-            ]
-          }
+          "options": { "lintFilePatterns": ["apps/web/**/*.{ts,tsx,js,jsx}"] }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/apps/web"
-          ],
+          "outputs": ["coverage/apps/web"],
           "options": {
             "jestConfig": "apps/web/jest.config.js",
             "passWithNoTests": true
@@ -116,18 +88,12 @@
             "devServerTarget": "web:serve"
           },
           "configurations": {
-            "production": {
-              "devServerTarget": "web:serve:production"
-            }
+            "production": { "devServerTarget": "web:serve:production" }
           }
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "apps/web-e2e/**/*.{js,ts}"
-            ]
-          }
+          "options": { "lintFilePatterns": ["apps/web-e2e/**/*.{js,ts}"] }
         }
       }
     },
@@ -143,9 +109,7 @@
             "outputPath": "dist/apps/desktop",
             "main": "apps/desktop/src/main.ts",
             "tsConfig": "apps/desktop/tsconfig.app.json",
-            "assets": [
-              "apps/desktop/src/assets"
-            ]
+            "assets": ["apps/desktop/src/assets"]
           },
           "configurations": {
             "production": {
@@ -163,9 +127,7 @@
         },
         "serve": {
           "executor": "nx-electron:execute",
-          "options": {
-            "buildTarget": "desktop:build"
-          }
+          "options": { "buildTarget": "desktop:build" }
         },
         "package": {
           "executor": "nx-electron:package",
@@ -186,19 +148,32 @@
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "apps/desktop/**/*.ts"
-            ]
-          }
+          "options": { "lintFilePatterns": ["apps/desktop/**/*.ts"] }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/apps/desktop"
-          ],
+          "outputs": ["coverage/apps/desktop"],
           "options": {
             "jestConfig": "apps/desktop/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "core": {
+      "root": "libs/core",
+      "sourceRoot": "libs/core/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": { "lintFilePatterns": ["libs/core/**/*.ts"] }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/core"],
+          "options": {
+            "jestConfig": "libs/core/jest.config.js",
             "passWithNoTests": true
           }
         }
