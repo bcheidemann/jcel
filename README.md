@@ -8,6 +8,10 @@ This project was generated using [Nx](https://nx.dev).
 
 🔎 **Nx is a set of Extensible Dev Tools for Monorepos.**
 
+## Electron
+
+This project uses nx-electron. Documentation can be found [here](https://www.npmjs.com/package/nx-electron).
+
 ## Adding capabilities to your workspace
 
 Nx supports many plugins which add capabilities for developing different types of applications and different tools.
