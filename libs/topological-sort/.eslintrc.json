@@ -7,7 +7,14 @@
       "parserOptions": {
         "project": ["libs/topological-sort/tsconfig.*?.json"]
       },
-      "rules": {}
+      "rules": {
+        "@nrwl/nx/enforce-module-boundaries": [
+          "error",
+          {
+            "no-non-null-assertion": "off"
+          }
+        ]
+      }
     },
     {
       "files": ["*.ts", "*.tsx"],
