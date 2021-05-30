@@ -270,6 +270,17 @@
           }
         }
       }
+    },
+    "types": {
+      "root": "libs/types",
+      "sourceRoot": "libs/types/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": { "lintFilePatterns": ["libs/types/**/*.ts"] }
+        }
+      }
     }
   }
 }

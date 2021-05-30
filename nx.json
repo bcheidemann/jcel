@@ -30,6 +30,7 @@
     "core": { "tags": ["core"] },
     "topological-sort": { "tags": ["topological-sort"] },
     "ui": { "tags": [] },
-    "io": { "tags": [] }
+    "io": { "tags": [] },
+    "types": { "tags": [] }
   }
 }
