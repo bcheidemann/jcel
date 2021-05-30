@@ -178,6 +178,25 @@
           }
         }
       }
+    },
+    "topological-sort": {
+      "root": "libs/topological-sort",
+      "sourceRoot": "libs/topological-sort/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": { "lintFilePatterns": ["libs/topological-sort/**/*.ts"] }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/topological-sort"],
+          "options": {
+            "jestConfig": "libs/topological-sort/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   }
 }

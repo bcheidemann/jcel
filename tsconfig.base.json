@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@jcel/core": ["libs/core/src/index.ts"]
+      "@jcel/core": ["libs/core/src/index.ts"],
+      "@jcel/topological-sort": ["libs/topological-sort/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
