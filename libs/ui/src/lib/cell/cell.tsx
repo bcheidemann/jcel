@@ -7,9 +7,11 @@ export interface CellProps {}
 
 export function Cell(props: CellProps) {
   return (
-    <div>
-      <h1>Welcome to cell!</h1>
-    </div>
+    <input style={{
+      borderWidth: 1,
+      borderStyle: 'solid',
+      borderColor: 'lightgray',
+    }} />
   );
 }
 
