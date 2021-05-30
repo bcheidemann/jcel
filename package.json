@@ -4,8 +4,10 @@
   "license": "MIT",
   "scripts": {
     "nx": "nx",
-    "start": "nx serve",
+    "serve": "nx serve",
+    "serve:desktop": "nx run-many --target=serve --projects=web,desktop --parallel",
     "build": "nx build",
+    "build:desktop": "nx run-many --target=build --projects=web,desktop --parallel",
     "test": "nx test",
     "lint": "nx workspace-lint && nx lint",
     "e2e": "nx e2e",
