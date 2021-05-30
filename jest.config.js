@@ -4,5 +4,6 @@ module.exports = {
     '<rootDir>/apps/desktop',
     '<rootDir>/libs/core',
     '<rootDir>/libs/topological-sort',
+    '<rootDir>/libs/ui',
   ],
 };
