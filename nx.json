@@ -31,6 +31,7 @@
     "topological-sort": { "tags": ["topological-sort"] },
     "ui": { "tags": [] },
     "io": { "tags": [] },
-    "types": { "tags": [] }
+    "types": { "tags": [] },
+    "jsutils": { "tags": [] }
   }
 }

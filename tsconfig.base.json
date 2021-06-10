@@ -19,7 +19,8 @@
       "@jcel/topological-sort": ["libs/topological-sort/src/index.ts"],
       "@jcel/ui": ["libs/ui/src/index.ts"],
       "@jcel/io": ["libs/io/src/index.ts"],
-      "@jcel/types": ["libs/types/src/index.ts"]
+      "@jcel/types": ["libs/types/src/index.ts"],
+      "@jcel/jsutils": ["libs/jsutils/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
