@@ -6,5 +6,6 @@ module.exports = {
     '<rootDir>/libs/topological-sort',
     '<rootDir>/libs/ui',
     '<rootDir>/libs/io',
+    '<rootDir>/libs/jsutils',
   ],
 };
