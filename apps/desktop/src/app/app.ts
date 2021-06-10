@@ -3,6 +3,8 @@ import { rendererAppName, rendererAppPort } from './constants';
 import { environment } from '../environments/environment';
 import { join } from 'path';
 import { format } from 'url';
+import installExtension, { REACT_DEVELOPER_TOOLS } from 'electron-devtools-installer';
+import { register as registerShortcut } from 'electron-localshortcut';
 
 export default class App {
   // Keep a global reference of the window object, if you don't, the window will
@@ -46,6 +48,15 @@ export default class App {
     // Some APIs can only be used after this event occurs.
     App.initMainWindow();
     App.loadMainWindow();
+
+    if (!environment.production) {
+      installExtension(REACT_DEVELOPER_TOOLS)
+        .then((name) => console.log(`Added Extension:  ${name}`))
+        .catch((err) => console.log('An error occurred: ', err));
+      registerShortcut(App.mainWindow, 'F12', function () {
+        App.mainWindow.webContents.toggleDevTools();
+      });
+    }
   }
 
   private static onActivate() {
