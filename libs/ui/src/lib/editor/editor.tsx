@@ -21,6 +21,7 @@ export function Editor(props: EditorProps) {
       style={{
         fontFamily: '"Fira code", "Fira Mono", monospace',
         fontSize: 12,
+        flex: 1,
       }}
     />
   );
