@@ -1,7 +1,5 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { Editor, Sheet } from '@jcel/ui';
-import { mocked } from 'ts-jest';
 
 import App from './app';
 
