@@ -1,7 +1,14 @@
 import React from 'react';
 import { render } from '@testing-library/react';
+import { Editor, Sheet } from '@jcel/ui';
+import { mocked } from 'ts-jest';
 
 import App from './app';
+
+jest.mock('@jcel/ui', () => ({
+  Editor: () => '[EDITOR]',
+  Sheet: () => '[SHEET]',
+}));
 
 describe('App', () => {
   it('should render successfully', () => {
@@ -10,9 +17,9 @@ describe('App', () => {
     expect(baseElement).toBeTruthy();
   });
 
-  it('should have a greeting as the title', () => {
-    const { getByText } = render(<App />);
+  it('should match the snapshot', () => {
+    const { baseElement } = render(<App />);
 
-    expect(getByText('Welcome to web!')).toBeTruthy();
+    expect(baseElement).toMatchSnapshot();
   });
 });

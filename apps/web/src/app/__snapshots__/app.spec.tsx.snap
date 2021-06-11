@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should match the snapshot 1`] = `
+<body>
+  <div>
+    <div
+      style="position: absolute; top: 0px; bottom: 0px; left: 0px; right: 0px; display: flex;"
+    >
+      [SHEET]
+      <div
+        style="width: 500px; background-color: white; display: flex; flex-direction: column;"
+      >
+        [EDITOR]
+        <button>
+          Save
+        </button>
+      </div>
+    </div>
+  </div>
+</body>
+`;
