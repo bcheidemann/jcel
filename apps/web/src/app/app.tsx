@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Editor, Sheet } from '@jcel/ui';
 
 export function App() {
